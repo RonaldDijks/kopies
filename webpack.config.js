@@ -13,10 +13,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: "file-loader"
+            loader: "url-loader",
+            options: {
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: "images/[hash]-[name].[ext]"
+            }
           }
         ]
       }
@@ -37,7 +41,6 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 9000,
-    open: true
+    port: 9000
   }
 };
