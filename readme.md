@@ -10,22 +10,30 @@ This is an example of how you may give instructions on setting up your project l
 
 This project uses the Yarn dependency manager. Make sure you have it installed in your node environment.
 
-```npm install yarn -g```
+```
+npm install yarn -g
+```
 
 ### Installation
 
 1. Clone the repository.
 
-```git clone https://github.com/RonaldDijks/kopies.git```
+```
+git clone https://github.com/RonaldDijks/kopies.git
+```
 
 2. Get the dependencies.
 
-```yarn```
+```
+yarn
+```
 
 ## Usage
 
-To start the project, just use
+To start the project, run:
 
-```yarn start```
+```
+yarn start
+```
 
-and the project should be available on `localhost:9000`
+The project should be available on `localhost:9000`!
